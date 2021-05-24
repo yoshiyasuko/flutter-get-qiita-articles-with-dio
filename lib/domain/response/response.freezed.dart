@@ -196,6 +196,8 @@ abstract class $FailureCopyWith<T, $Res> {
   factory $FailureCopyWith(Failure<T> value, $Res Function(Failure<T>) then) =
       _$FailureCopyWithImpl<T, $Res>;
   $Res call({ApiError error});
+
+  $ApiErrorCopyWith<$Res> get error;
 }
 
 /// @nodoc
@@ -217,6 +219,13 @@ class _$FailureCopyWithImpl<T, $Res> extends _$ResponseCopyWithImpl<T, $Res>
           : error // ignore: cast_nullable_to_non_nullable
               as ApiError,
     ));
+  }
+
+  @override
+  $ApiErrorCopyWith<$Res> get error {
+    return $ApiErrorCopyWith<$Res>(_value.error, (value) {
+      return _then(_value.copyWith(error: value));
+    });
   }
 }
 
