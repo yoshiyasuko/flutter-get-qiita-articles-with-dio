@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'response.dart';
+part of 'result.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -13,8 +13,8 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$ResponseTearOff {
-  const _$ResponseTearOff();
+class _$ResultTearOff {
+  const _$ResultTearOff();
 
   Success<T> success<T>(T value) {
     return Success<T>(
@@ -30,10 +30,10 @@ class _$ResponseTearOff {
 }
 
 /// @nodoc
-const $Response = _$ResponseTearOff();
+const $Result = _$ResultTearOff();
 
 /// @nodoc
-mixin _$Response<T> {
+mixin _$Result<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T value) success,
@@ -63,19 +63,18 @@ mixin _$Response<T> {
 }
 
 /// @nodoc
-abstract class $ResponseCopyWith<T, $Res> {
-  factory $ResponseCopyWith(
-          Response<T> value, $Res Function(Response<T>) then) =
-      _$ResponseCopyWithImpl<T, $Res>;
+abstract class $ResultCopyWith<T, $Res> {
+  factory $ResultCopyWith(Result<T> value, $Res Function(Result<T>) then) =
+      _$ResultCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class _$ResponseCopyWithImpl<T, $Res> implements $ResponseCopyWith<T, $Res> {
-  _$ResponseCopyWithImpl(this._value, this._then);
+class _$ResultCopyWithImpl<T, $Res> implements $ResultCopyWith<T, $Res> {
+  _$ResultCopyWithImpl(this._value, this._then);
 
-  final Response<T> _value;
+  final Result<T> _value;
   // ignore: unused_field
-  final $Res Function(Response<T>) _then;
+  final $Res Function(Result<T>) _then;
 }
 
 /// @nodoc
@@ -86,7 +85,7 @@ abstract class $SuccessCopyWith<T, $Res> {
 }
 
 /// @nodoc
-class _$SuccessCopyWithImpl<T, $Res> extends _$ResponseCopyWithImpl<T, $Res>
+class _$SuccessCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
     implements $SuccessCopyWith<T, $Res> {
   _$SuccessCopyWithImpl(Success<T> _value, $Res Function(Success<T>) _then)
       : super(_value, (v) => _then(v as Success<T>));
@@ -117,7 +116,7 @@ class _$Success<T> implements Success<T> {
 
   @override
   String toString() {
-    return 'Response<$T>.success(value: $value)';
+    return 'Result<$T>.success(value: $value)';
   }
 
   @override
@@ -182,7 +181,7 @@ class _$Success<T> implements Success<T> {
   }
 }
 
-abstract class Success<T> implements Response<T> {
+abstract class Success<T> implements Result<T> {
   const factory Success(T value) = _$Success<T>;
 
   T get value => throw _privateConstructorUsedError;
@@ -201,7 +200,7 @@ abstract class $FailureCopyWith<T, $Res> {
 }
 
 /// @nodoc
-class _$FailureCopyWithImpl<T, $Res> extends _$ResponseCopyWithImpl<T, $Res>
+class _$FailureCopyWithImpl<T, $Res> extends _$ResultCopyWithImpl<T, $Res>
     implements $FailureCopyWith<T, $Res> {
   _$FailureCopyWithImpl(Failure<T> _value, $Res Function(Failure<T>) _then)
       : super(_value, (v) => _then(v as Failure<T>));
@@ -239,7 +238,7 @@ class _$Failure<T> implements Failure<T> {
 
   @override
   String toString() {
-    return 'Response<$T>.failure(error: $error)';
+    return 'Result<$T>.failure(error: $error)';
   }
 
   @override
@@ -304,7 +303,7 @@ class _$Failure<T> implements Failure<T> {
   }
 }
 
-abstract class Failure<T> implements Response<T> {
+abstract class Failure<T> implements Result<T> {
   const factory Failure(ApiError error) = _$Failure<T>;
 
   ApiError get error => throw _privateConstructorUsedError;
