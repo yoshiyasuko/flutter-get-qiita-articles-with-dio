@@ -1,5 +1,5 @@
 class User {
-  int id;
+  String id;
   String profileImageUrl;
 
   User({required this.id, required this.profileImageUrl});

@@ -1,7 +1,7 @@
 import 'package:flutter_get_qiita_articles_with_dio/domain/entity/user.dart';
 
 class Article {
-  int id;
+  String id;
   String title;
   String url;
   User user;
