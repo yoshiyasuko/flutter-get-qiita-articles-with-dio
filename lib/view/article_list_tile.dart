@@ -11,7 +11,12 @@ class ArticleListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: CircleAvatar(
-        backgroundImage: NetworkImage(article.user.profileImageUrl),
+        child: ClipOval(
+          child: Image.network(article.user.profileImageUrl,
+              errorBuilder: (context, exception, stacktrace) {
+            return Text('Q');
+          }),
+        ),
       ),
       title: Text(article.title),
     );
