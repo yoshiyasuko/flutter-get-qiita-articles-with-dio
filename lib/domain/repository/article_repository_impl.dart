@@ -11,6 +11,6 @@ class ArticleRepositoryImpl with ArticleRepository {
         type: RequestType.get(),
         path: '/items',
         jsonDecodeCallback: (data) =>
-            (data as List).map((value) => Article.fromJson(value)).toList());
+            data.map((value) => Article.fromJson(value)).toList());
   }
 }

@@ -13,11 +13,10 @@ class ApiClient {
   Future<Result<T>> sendRequest<T>(
       {required RequestType type,
       required String path,
-      required T Function(Map<String, dynamic>) jsonDecodeCallback}) async {
+      required T Function(List<dynamic>) jsonDecodeCallback}) async {
     try {
-      Future<Response<Map<String, dynamic>>> _request = type.when(
-          get: () =>
-              AppDio().get<Map<String, dynamic>>(ApiConfig.endpoint + path));
+      Future<Response<List<dynamic>>> _request = type.when(
+          get: () => AppDio().get<List<dynamic>>(ApiConfig.endpoint + path));
       return await _request.then(
           (response) => Result.success(jsonDecodeCallback(response.data!)));
     } catch (error) {
