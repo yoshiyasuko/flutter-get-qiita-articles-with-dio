@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_get_qiita_articles_with_dio/domain/entity/article.dart';
+import 'package:flutter_get_qiita_articles_with_dio/view/article_detail_web_view.dart';
 
 class ArticleListTile extends StatelessWidget {
   ArticleListTile({required this.article});
@@ -19,6 +20,12 @@ class ArticleListTile extends StatelessWidget {
         ),
       ),
       title: Text(article.title),
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => ArticleDetailWebView(article: article)));
+      },
     );
   }
 }
