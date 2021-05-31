@@ -11,3 +11,5 @@ A new Flutter project.
   - https://pub.dev/packages/provider
 - flutter_easyloading (loading view)
   - https://pub.dev/packages/flutter_easyloading
+- webview_flutter (webview)
+  - https://pub.dev/packages/webview_flutter
